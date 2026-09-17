@@ -1,0 +1,594 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0d0b0a;
+    color: #f5ead8;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* =====================================
+   COLORES
+===================================== */
+
+:root {
+    --dorado: #d2b06f;
+    --dorado-claro: #e4c989;
+    --dorado-hover: #b89450;
+
+    --negro: #0d0b0a;
+    --negro-claro: #151210;
+
+    --campo: #181411;
+    --borde: #3a3025;
+
+    --texto: #f5ead8;
+    --texto-gris: #a9987f;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.logo {
+    color: var(--dorado-claro) !important;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    background: #0d0b0a !important;
+    border-bottom: 1px solid #2c241c;
+}
+
+.nav-link {
+    color: #b9aa94 !important;
+    margin: 0 8px;
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--dorado-claro) !important;
+}
+
+.nav-link.active {
+    color: var(--dorado) !important;
+}
+
+
+/* =====================================
+   BOTONES
+===================================== */
+
+.btn-gold {
+    background: var(--dorado);
+    color: #0d0b0a;
+    border: 1px solid var(--dorado);
+    padding: 11px 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background: var(--dorado-claro);
+    border-color: var(--dorado-claro);
+    color: #000;
+    transform: translateY(-1px);
+}
+
+.btn-login {
+    color: #b9aa94;
+    border: none;
+    background: transparent;
+}
+
+.btn-login:hover {
+    color: var(--dorado-claro);
+}
+
+.btn-register {
+    border: 1px solid var(--dorado);
+    color: var(--dorado);
+    background: transparent;
+}
+
+.btn-register:hover {
+    background: var(--dorado);
+    color: #0d0b0a;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(8, 7, 6, 0.70),
+            rgba(8, 7, 6, 0.70)
+        ),
+        linear-gradient(135deg, #332b23, #0d0b0a);
+
+    color: #fff8ed;
+
+    margin-top: 56px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 55px;
+    font-weight: 500;
+}
+
+.hero p {
+    color: #c1ad91;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+/* =====================================
+   PRODUCTOS
+===================================== */
+
+.producto-card {
+    background: #151210;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.30);
+
+    transition: 0.3s;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    border-color: #80683e;
+}
+
+.producto-imagen {
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #1b1713;
+
+    color: #756957;
+
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.producto-card h3,
+.producto-card h4 {
+    color: #f5ead8;
+}
+
+.producto-card p {
+    color: #998a77;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    background: #0a0908;
+    color: #a9987f;
+
+    padding: 30px 0;
+    margin-top: 50px;
+
+    border-top: 1px solid #2c241c;
+}
+
+.footer h4,
+.footer h5 {
+    color: var(--dorado-claro);
+    font-family: "Playfair Display", serif;
+}
+
+.footer a {
+    color: #998a77;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--dorado-claro);
+}
+
+
+/* =====================================
+   LOGIN / REGISTRO
+===================================== */
+
+.auth-body {
+    margin: 0;
+    background: #0d0b0a;
+    color: #f5ead8;
+}
+
+.auth-container {
+    min-height: 100vh;
+    background: #0d0b0a;
+}
+
+
+/* =====================================
+   IMÁGENES
+===================================== */
+
+.auth-image {
+    min-height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.login-image {
+    background:
+        linear-gradient(
+            rgba(8, 7, 6, 0.60),
+            rgba(8, 7, 6, 0.60)
+        ),
+        linear-gradient(135deg, #40372d, #0d0b0a);
+}
+
+.register-image {
+    background:
+        linear-gradient(
+            rgba(8, 7, 6, 0.60),
+            rgba(8, 7, 6, 0.60)
+        ),
+        linear-gradient(135deg, #40372d, #0d0b0a);
+}
+
+.image-overlay {
+    text-align: center;
+    color: #fff8ed;
+}
+
+.image-overlay h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 60px;
+    letter-spacing: 5px;
+    color: var(--dorado-claro);
+}
+
+.image-overlay p {
+    color: #c1ad91;
+    font-size: 18px;
+}
+
+
+/* =====================================
+   FORMULARIOS
+===================================== */
+
+.auth-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px;
+
+    background: #0d0b0a;
+}
+
+.auth-content {
+    width: 100%;
+    max-width: 500px;
+}
+
+.auth-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff8ed;
+}
+
+.auth-content p {
+    color: #998a77;
+}
+
+.form-control {
+    padding: 13px 15px;
+
+    min-height: 48px;
+
+    border-radius: 0;
+
+    background: #151210;
+    border: 1px solid var(--borde);
+
+    color: #eee1cd;
+}
+
+.form-control::placeholder {
+    color: #51483e;
+}
+
+.form-control:focus {
+    background: #181411;
+
+    color: #fff;
+
+    border-color: #9b7942;
+
+    box-shadow:
+        0 0 0 0.15rem rgba(210, 176, 111, 0.08);
+}
+
+.form-label {
+    color: #a99478;
+
+    font-size: 12px;
+
+    letter-spacing: 1.2px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================
+   VOLVER
+===================================== */
+
+.back-button {
+    text-decoration: none;
+
+    color: #998a77;
+
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    color: var(--dorado-claro);
+}
+
+
+/* =====================================
+   SOCIAL LOGIN
+===================================== */
+
+.btn-social {
+    border: 1px solid var(--borde);
+
+    background: #151210;
+
+    color: #c5b6a0;
+
+    padding: 10px;
+
+    transition: 0.2s;
+}
+
+.btn-social:hover {
+    background: #1c1814;
+
+    border-color: #80683e;
+
+    color: #e4c989;
+}
+
+
+/* =====================================
+   SEPARADOR
+===================================== */
+
+.separator {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 25px 0;
+
+    color: #806f5b;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #29231d;
+}
+
+
+/* =====================================
+   LINKS
+===================================== */
+
+.auth-content a {
+    color: #c69f5b;
+
+    text-decoration: none;
+}
+
+.auth-content a:hover {
+    color: var(--dorado-claro);
+
+    text-decoration: underline;
+}
+
+.btn-link-custom {
+    border: none;
+
+    background: none;
+
+    padding: 0;
+
+    color: #c69f5b;
+}
+
+.btn-link-custom:hover {
+    color: var(--dorado-claro);
+
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   AVATAR
+===================================== */
+
+.avatar {
+    width: 35px;
+    height: 35px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--dorado);
+
+    color: #0d0b0a;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-right: 7px;
+}
+
+.usuario-btn {
+    display: flex;
+
+    align-items: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #c5b6a0;
+}
+
+
+/* =====================================
+   VISTA DE COMPRA
+===================================== */
+
+.checkout {
+    background: #0d0b0a;
+    color: #f5ead8;
+}
+
+.checkout-card {
+    background: #151210;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 8px;
+}
+
+.checkout-title {
+    font-family: "Playfair Display", serif;
+
+    color: #fff8ed;
+}
+
+.checkout-text {
+    color: #998a77;
+}
+
+.checkout-input {
+    background: #151210;
+
+    border: 1px solid var(--borde);
+
+    color: #eee1cd;
+}
+
+.checkout-input:focus {
+    background: #181411;
+
+    border-color: #9b7942;
+
+    color: white;
+
+    box-shadow: 0 0 0 0.15rem rgba(210, 176, 111, 0.08);
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 991px) {
+
+    .auth-image {
+        display: none;
+    }
+
+    .auth-form {
+        min-height: 100vh;
+
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .auth-content {
+        max-width: 100%;
+    }
+
+    .image-overlay h1 {
+        font-size: 40px;
+    }
+
+}

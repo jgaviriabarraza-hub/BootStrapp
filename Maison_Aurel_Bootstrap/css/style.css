@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+:root {
+  --gold: #d2b06f;
+  --gold-light: #e4c989;
+  --text-muted: #a9987f;
+  --bg: #0d0b0a;
+  --field: #151210;
+  --border: #3a3025;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: #f5ead8;
+  font-family: "DM Sans", sans-serif;
+}
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* IZQUIERDA */
+.brand-panel {
+  position: relative;
+  width: 52%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  /* Puedes reemplazar esta URL por la foto de tu bolso */
+  background-image:
+    linear-gradient(to top, rgba(8,7,6,.92) 0%, rgba(8,7,6,.18) 65%),
+    linear-gradient(90deg, rgba(0,0,0,.25), rgba(0,0,0,.05)),
+    url("https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1400&q=85");
+  background-size: cover;
+  background-position: center;
+}
+
+.brand-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.42), transparent 45%, rgba(0,0,0,.58));
+}
+
+.brand-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: 100vh;
+  padding: 58px 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand-name {
+  color: var(--gold-light);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 6px;
+}
+
+.brand-message {
+  max-width: 610px;
+  margin-top: auto;
+  padding-bottom: 4px;
+}
+
+.brand-message h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.06;
+  font-weight: 500;
+  margin: 0 0 18px;
+  color: #fff8ed;
+}
+
+.brand-message p {
+  max-width: 520px;
+  color: #c1ad91;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 34px;
+}
+
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+}
+
+.benefits span {
+  border: 1px solid rgba(210,176,111,.5);
+  color: var(--gold-light);
+  padding: 9px 13px;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+}
+
+/* DERECHA */
+.form-panel {
+  width: 48%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d0b0a;
+  padding: 50px 6%;
+}
+
+.form-wrapper {
+  width: min(100%, 540px);
+}
+
+.form-wrapper h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #fff8ed;
+}
+
+.form-wrapper header p {
+  color: #998a77;
+  margin: 0;
+  font-size: 14px;
+}
+
+.form-label {
+  color: #a99478;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  min-height: 52px;
+  border-radius: 0;
+  border: 1px solid var(--border);
+  background: var(--field);
+  color: #eee1cd;
+  padding: 13px 18px;
+  font-size: 14px;
+}
+
+.form-control::placeholder {
+  color: #4e463d;
+}
+
+.form-control:focus {
+  background: #171310;
+  color: #fff;
+  border-color: #9b7942;
+  box-shadow: 0 0 0 .15rem rgba(210,176,111,.08);
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box .form-control {
+  padding-right: 50px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  border: 0;
+  background: transparent;
+  color: #8e806e;
+  cursor: pointer;
+}
+
+.password-toggle:hover {
+  color: var(--gold-light);
+}
+
+.newsletter {
+  margin: 25px 0 23px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.form-check-input {
+  width: 18px;
+  height: 18px;
+  border-radius: 0 !important;
+  margin-top: 1px;
+  background-color: transparent;
+  border: 1px solid #5a4a36;
+}
+
+.form-check-input:checked {
+  background-color: var(--gold);
+  border-color: var(--gold);
+}
+
+.form-check-label {
+  color: #a69682;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.btn-create {
+  width: 100%;
+  min-height: 56px;
+  border: 0;
+  border-radius: 0;
+  background: var(--gold);
+  color: #0d0b0a;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 26px;
+  transition: .2s ease;
+}
+
+.btn-create:hover {
+  background: var(--gold-light);
+  color: #000;
+  transform: translateY(-1px);
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 29px 0 17px;
+  color: #a28f76;
+  font-size: 12px;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #29231d;
+}
+
+.login-text {
+  text-align: center;
+  color: #968873;
+  font-size: 13px;
+}
+
+.login-text a,
+.legal a {
+  color: #c69f5b;
+  text-decoration: none;
+}
+
+.login-text a:hover,
+.legal a:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+.legal {
+  text-align: center;
+  color: #655b50;
+  font-size: 11px;
+  margin-top: 40px;
+}
+
+.success-alert {
+  margin-top: 18px;
+  border-radius: 0;
+  border: 1px solid #80683e;
+  background: #17130d;
+  color: #d9c18f;
+  font-size: 13px;
+}
+
+/* Modal */
+.login-modal {
+  background: #12100e;
+  color: #eee1cd;
+  border: 1px solid #3a3025;
+  border-radius: 0;
+}
+
+.login-modal .modal-title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .register-page {
+    display: block;
+  }
+
+  .brand-panel,
+  .form-panel {
+    width: 100%;
+  }
+
+  .brand-panel {
+    min-height: 48vh;
+  }
+
+  .brand-content {
+    min-height: 48vh;
+    padding: 35px 7%;
+  }
+
+  .brand-message h1 {
+    font-size: 39px;
+  }
+
+  .form-panel {
+    min-height: auto;
+    padding: 55px 7%;
+  }
+}
+
+@media (max-width: 575px) {
+  .brand-panel {
+    min-height: 55vh;
+  }
+
+  .brand-content {
+    min-height: 55vh;
+  }
+
+  .brand-message h1 {
+    font-size: 34px;
+  }
+
+  .brand-message p {
+    font-size: 13px;
+  }
+
+  .form-wrapper h2 {
+    font-size: 32px;
+  }
+
+  .form-panel {
+    padding: 45px 22px;
+  }
+}

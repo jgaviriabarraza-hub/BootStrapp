@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kavod the Bag | Crear cuenta</title>
+
+    <!-- Bootstrap 5 por CDN: no necesitas instalar nada -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons por CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <main class="register-page">
+      <!-- Panel izquierdo -->
+      <section class="brand-panel">
+        <div class="brand-overlay"></div>
+
+        <div class="brand-content">
+          <div class="brand-name">Kavod the</div>
+
+          <div class="brand-message">
+            <h1>El arte de llevar lo que<br />perdura.</h1>
+            <p>
+              Piezas de piel artesanal, concebidas para acompañarte décadas
+              enteras.
+            </p>
+
+            <div class="benefits">
+              <span>PIEL ITALIANA</span>
+              <span>ENVÍO GRATUITO</span>
+              <span>DEVOLUCIÓN 30 DÍAS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Panel derecho -->
+      <section class="form-panel">
+        <div class="form-wrapper">
+          <header class="mb-4">
+              <h2>Crear cuenta</h2>
+            <p>
+              Únete y accede a colecciones exclusivas y beneficios de cliente.
+            </p>
+          </header>
+
+          <form id="registerForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="nombre" class="form-label">NOMBRE</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  placeholder="Sofía"
+                  required
+                />
+                <div class="invalid-feedback">Escribe tu nombre.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="apellido" class="form-label">APELLIDO</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellido"
+                  placeholder="Ruiz"
+                  required
+                />
+                <div class="invalid-feedback">Escribe tu apellido.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="correo" class="form-label"
+                  >CORREO ELECTRÓNICO</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="correo"
+                  placeholder="sofia@ejemplo.com"
+                  required
+                />
+                <div class="invalid-feedback">Introduce un correo válido.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="contrasena" class="form-label">CONTRASEÑA</label>
+                <div class="password-box">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="contrasena"
+                    placeholder="Mínimo 8 caracteres"
+                    minlength="8"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    data-target="contrasena"
+                    aria-label="Mostrar contraseña"
+                  >
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+                <div
+                  class="invalid-feedback d-block"
+                  id="passwordFeedback"
+                ></div>
+              </div>
+
+              <div class="col-12">
+                <label for="confirmar" class="form-label"
+                  >CONFIRMAR CONTRASEÑA</label
+                >
+                <div class="password-box">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirmar"
+                    placeholder="Repite tu contraseña"
+                    minlength="8"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    data-target="confirmar"
+                    aria-label="Mostrar contraseña"
+                  >
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+                <div
+                  class="invalid-feedback d-block"
+                  id="confirmFeedback"
+                ></div>
+              </div>
+            </div>
+
+            <div class="form-check newsletter">
+              <input class="form-check-input" type="checkbox" id="novedades" />
+              <label class="form-check-label" for="novedades">
+                Quiero recibir novedades, lanzamientos exclusivos y ofertas de
+                Kavod.
+              </label>
+            </div>
+
+            <button type="submit" class="btn-create">
+              <span>CREAR MI CUENTA</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+
+            <div class="separator">
+              <span>o</span>
+            </div>
+
+            <p class="login-text">
+            ¿Ya tienes cuenta?
+            <a href="login.html">Inicia sesión</a>
+            </p>
+            <p class="legal">
+              Al registrarte aceptas nuestros
+              <a href="#">Términos de uso</a> y
+              <a href="#">Política de privacidad</a>.
+            </p>
+
+            <div
+              id="successMessage"
+              class="alert success-alert d-none"
+              role="alert"
+            >
+              <i class="bi bi-check-circle"></i>
+              <span
+                >¡Cuenta creada correctamente! Bienvenido/a a Kavod 1.3
+                Aurel.</span
+              >
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
